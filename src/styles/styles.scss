@@ -1,0 +1,10 @@
+@import "./base/settings"; /* Variables & colors defs */
+@import "./base/base"; /* global styles */
+
+
+/* Components Styles */
+
+@import "./components/auth";
+@import "./components/journal";
+@import "./components/blankPage";
+@import "./components/note";

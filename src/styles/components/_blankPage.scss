@@ -1,0 +1,13 @@
+.blankPage__main-content {
+    align-items: center;
+    background-color: $color_primary;
+    color: $color_light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.blankPage__main-content p {
+    text-align: center;
+}
