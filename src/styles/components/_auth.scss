@@ -1,0 +1,22 @@
+.auth__main {
+    align-items: center;
+    background-color: $color_primary;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.auth__container {
+    background-color: $color_light;
+    box-shadow: $color_dark-grey;
+    border-radius: 2px;
+    padding: 50px;
+    width: 25%;
+}
+
+
+.auth__container h1 {
+    margin-bottom: 22px;
+}
