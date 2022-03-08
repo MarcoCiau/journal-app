@@ -1,4 +1,5 @@
 import React from "react";
+import { NoteScreen } from "../note/NoteScreen";
 import { BlankPage } from "./BlankPage";
 import { Sidebar } from "./Sidebar";
 export const JournalScreen = () => {
@@ -8,6 +9,7 @@ export const JournalScreen = () => {
 
       <main>
         {/* <BlankPage /> */}
+        <NoteScreen /> 
       </main>
     </div>
   );

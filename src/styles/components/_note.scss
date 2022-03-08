@@ -1,0 +1,21 @@
+.note__main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.note__appbar {
+    align-items: center;
+    background-color: $color_primary;
+    color: $color_light;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+}
+
+.note__appbar button {
+    color: $color_light;
+    transition: color 0.3s ease;
+    &:hover {
+        color: $color_dark-grey;
+    }
+}
