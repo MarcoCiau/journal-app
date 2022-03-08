@@ -1,40 +1,63 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { authLoginAction } from "../../action/actionHandlers";
+import { useForm } from "../../hooks/useForm";
 
 export const SigninScreen = () => {
+  const [formValues, handleInputChange] = useForm({
+    email: "user@gmail.com",
+    password: "123456789",
+  });
+
+  const dispatch = useDispatch();
+  const { email, password } = formValues;
+
+  const handleSinginFormSubmit = (e) => {
+    e.preventDefault();
+    console.log(email, password);
+    dispatch(authLoginAction({uid:"hsjsjsu", name:"marco"}));
+  };
   return (
     <>
       <h1>Login to your account</h1>
-      <p>Don't have an account? <a href="/signup">Sign Up Here</a> </p>
+      <p>
+        Don't have an account? <a href="/signup">Sign Up Here</a>{" "}
+      </p>
 
-      <form>
-        <div class="form-group">
-          <label for="loginEmail">Email address</label>
+      <form onSubmit={handleSinginFormSubmit}>
+        <div className="form-group">
+          <label>Email address</label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="loginEmail"
             placeholder="Enter email"
             name="email"
+            value={email}
+            onChange={handleInputChange}
           />
         </div>
-        <div class="form-group">
-          <label for="loginPassword">Password</label>
+        <div className="form-group">
+          <label>Password</label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="loginPassword"
             placeholder="Password"
             name="password"
+            value={password}
+            onChange={handleInputChange}
           />
         </div>
-        <br />
-        <button type="submit" class="btn btn-primary btn-lg btn-block">
+
+        <button type="submit" className="btn btn-primary btn-lg btn-block">
           Login
         </button>
-        <button class="btn btn-danger btn-lg btn-block">
-        <i className="fab fa-google"> Login with Google </i>
-        </button>
       </form>
+      <br />
+      <button className="btn btn-danger btn-lg btn-block">
+        <i className="fab fa-google"> Login with Google </i>
+      </button>
     </>
   );
 };

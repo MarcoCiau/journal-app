@@ -9,31 +9,31 @@ export const SignupScreen = () => {
       </p>
 
       <form>
-        <div class="form-group">
-          <label for="registerEmail">Email address</label>
+        <div className="form-group">
+          <label>Email address</label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="registerEmail"
             placeholder="Enter email"
             name="email"
           />
         </div>
-        <div class="form-group">
-          <label for="registerPassword">Password</label>
+        <div className="form-group">
+          <label>Password</label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="registerPassword"
             placeholder="Password"
             name="password"
           />
         </div>
         <br />
-        <button type="submit" class="btn btn-primary btn-lg btn-block">
+        <button type="submit" className="btn btn-primary btn-lg btn-block">
           Sign Up
         </button>
-        <button class="btn btn-danger btn-lg btn-block">
+        <button className="btn btn-danger btn-lg btn-block">
           <i className="fab fa-google"> Sign Up with Google </i>
         </button>
       </form>
