@@ -19,3 +19,38 @@
         color: $color_dark-grey;
     }
 }
+
+.note__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+
+.note__title-input, .note__textarea {
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}
+
+.note__title-input {
+    color: $color_dark-grey;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.note__textarea {
+    border: none;
+    color: $color_dark-grey;
+    font-size: 20px;
+    flex: 1 1 auto;
+    resize: none;
+}
+
+.note__image img {
+    box-shadow: 5px 5px $color_dark-grey;
+    height: 150px;
+}
